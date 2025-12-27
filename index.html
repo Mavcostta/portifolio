@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Maria Vitória - Desenvolvedora Frontend em Formação | Portfólio com projetos em HTML, CSS, JavaScript. Participante do Programa Desenvolve - Grupo Boticário."
+    />
+    <meta
+      name="keywords"
+      content="desenvolvedor frontend, portfolio, HTML, CSS, JavaScript, Python, web developer, Maria Vitória"
+    />
+    <meta name="author" content="Maria Vitória" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Maria Vitória | Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Desenvolvedora Frontend em formação. Estagiária na B3, focada em criar experiências digitais com HTML, CSS e JavaScript."
+    />
+    <meta
+      property="og:image"
+      content="https://seusite.com/imagens/preview.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Maria Vitória | Frontend Developer" />
+    <meta
+      name="twitter:description"
+      content="Desenvolvedora Frontend em formação. Confira meu portfólio!"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="alternate icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Maria Vitória | Frontend Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-logo">
+        <div class="logo-brackets">&lt;</div>
+        <div class="logo-text">
+          <span class="logo-letter">m</span>
+          <span class="logo-letter">v</span>
+        </div>
+        <div class="logo-brackets">/&gt;</div>
+      </div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-text">
+        <span class="loading-letter">c</span>
+        <span class="loading-letter">a</span>
+        <span class="loading-letter">r</span>
+        <span class="loading-letter">r</span>
+        <span class="loading-letter">e</span>
+        <span class="loading-letter">g</span>
+        <span class="loading-letter">a</span>
+        <span class="loading-letter">n</span>
+        <span class="loading-letter">d</span>
+        <span class="loading-letter">o</span>
+        <span class="loading-dots">
+          <span>.</span><span>.</span><span>.</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Cursor Personalizado -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Barra de Progresso -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+    <!-- Fundo Tech Global -->
+    <div class="tech-background-global">
+      <div class="tech-icon" style="top: 10%; left: 5%; animation-delay: 0s">
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M8.76 1l10.055 112.883 45.118 12.58 45.244-12.626L119.24 1H8.76zm89.591 25.862l-3.347 37.605.01.203-.014.467v-.004l-2.378 26.294-.262 2.336L64 101.607v.001l-.022.019-28.311-7.888L33.75 72h13.883l.985 11.054 15.386 4.17-.004.008v-.002l15.443-4.229L81.075 65H48.792l-.277-3.043-.631-7.129L47.553 51h34.749l1.264-14H30.64l-.277-3.041-.63-7.131L29.401 23h69.281l-.331 3.862z"
+          ></path>
+        </svg>
+      </div>
+      <div class="tech-icon" style="top: 25%; right: 8%; animation-delay: 1s">
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M18.814 114.123L8.76 1.352h112.48l-10.064 112.754-45.243 12.543-45.119-12.526z"
+          ></path>
+          <path
+            fill="currentColor"
+            d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"
+          ></path>
+          <path
+            fill="currentColor"
+            d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"
+          ></path>
+          <path
+            fill="currentColor"
+            d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"
+          ></path>
+          <path
+            fill="currentColor"
+            d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"
+          ></path>
+          <path
+            fill="currentColor"
+            d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"
+          ></path>
+        </svg>
+      </div>
+      <div class="tech-icon" style="top: 45%; left: 10%; animation-delay: 2s">
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M2 1v125h125V1H2zm66.119 106.513c-1.845 3.749-5.367 6.212-9.448 7.401-6.271 1.44-12.269.619-16.731-2.059-2.986-1.832-5.318-4.652-6.901-7.901l9.52-5.83c.083.035.333.487.667 1.071 1.214 2.034 2.261 3.474 4.319 4.485 2.022.69 6.461 1.131 8.175-2.427 1.047-1.81.714-7.628.714-14.065C58.433 78.073 58.48 68 58.48 58h11.709c0 11 .06 21.418 0 32.152.025 6.58.596 12.446-2.07 17.361zm48.574-3.308c-4.07 13.922-26.762 14.374-35.83 5.176-1.916-2.165-3.117-3.296-4.26-5.795 4.819-2.772 4.819-2.772 9.508-5.485 2.547 3.915 4.902 6.068 9.139 6.949 5.748.702 11.531-1.273 10.234-7.378-1.333-4.986-11.77-6.199-18.873-10.531-7.211-4.843-8.901-16.611-2.975-23.335 1.975-2.487 5.343-4.343 8.877-5.235l3.688-.477c7.081-.143 11.507 1.727 14.756 5.355.904.916 1.642 1.904 3.022 4.045-3.772 2.404-3.76 2.381-9.163 5.879-1.154-2.486-3.069-4.046-5.093-4.724-3.142-.952-7.104.083-7.926 3.403-.285 1.023-.226 1.975.227 3.665 1.273 2.903 5.545 4.165 9.377 5.926 11.031 4.474 14.756 9.271 15.672 14.981.882 4.916-.213 8.105-.38 8.581z"
+          ></path>
+        </svg>
+      </div>
+      <div class="tech-icon" style="top: 65%; right: 12%; animation-delay: 3s">
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M49.33 62h29.159C86.606 62 93 55.132 93 46.981V19.183c0-7.912-6.632-13.856-14.555-15.176-5.014-.835-10.195-1.215-15.187-1.191-4.99.023-9.612.448-13.805 1.191C37.098 6.188 35 10.758 35 19.183V30h29v4H23.776c-8.484 0-15.914 5.108-18.237 14.811-2.681 11.12-2.8 17.919 0 29.53C7.614 86.983 12.569 93 21.054 93H31V79.952C31 70.315 39.428 62 49.33 62zm-1.838-39.11c-3.026 0-5.478-2.479-5.478-5.545 0-3.079 2.451-5.581 5.478-5.581 3.015 0 5.479 2.502 5.479 5.581-.001 3.066-2.465 5.545-5.479 5.545zm74.789 25.921C120.183 40.363 116.178 34 107.682 34H97v12.981C97 57.031 88.206 65 78.489 65H49.33C41.342 65 35 72.326 35 80.326v27.8c0 7.91 6.745 12.564 14.462 14.834 9.242 2.717 17.994 3.208 29.051 0C85.862 120.831 93 116.549 93 108.126V97H64v-4h43.682c8.484 0 11.647-5.776 14.599-14.66 3.047-9.145 2.916-17.799 0-29.529zm-41.955 55.606c3.027 0 5.479 2.479 5.479 5.547 0 3.076-2.451 5.579-5.479 5.579-3.015 0-5.478-2.502-5.478-5.579 0-3.068 2.463-5.547 5.478-5.547z"
+          ></path>
+        </svg>
+      </div>
+      <div class="tech-icon" style="top: 15%; left: 50%; animation-delay: 4s">
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z"
+          ></path>
+        </svg>
+      </div>
+      <div class="tech-icon" style="top: 80%; left: 15%; animation-delay: 5s">
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+          ></path>
+        </svg>
+      </div>
+      <div class="tech-icon" style="top: 50%; right: 5%; animation-delay: 1.5s">
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c.1-.8 0-1.7-.4-2.6z"
+          ></path>
+        </svg>
+      </div>
+      <div class="tech-icon" style="top: 35%; left: 85%; animation-delay: 2.5s">
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0zm32.7 114.4L48.4 56.2v32.6h-8.4V41.2h7.6l48.3 58.2V67.2h8.4v47.2h-7.6z"
+          ></path>
+        </svg>
+      </div>
+      <div class="tech-icon" style="top: 70%; left: 40%; animation-delay: 3.5s">
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M18.814 114.123L8.76 1.352h112.48l-10.064 112.754-45.243 12.543-45.119-12.526z"
+          ></path>
+        </svg>
+      </div>
+      <div
+        class="tech-icon"
+        style="top: 90%; right: 20%; animation-delay: 4.5s"
+      >
+        <svg viewBox="0 0 128 128">
+          <path
+            fill="currentColor"
+            d="M2 1v125h125V1H2zm66.119 106.513c-1.845 3.749-5.367 6.212-9.448 7.401-6.271 1.44-12.269.619-16.731-2.059-2.986-1.832-5.318-4.652-6.901-7.901l9.52-5.83c.083.035.333.487.667 1.071 1.214 2.034 2.261 3.474 4.319 4.485 2.022.69 6.461 1.131 8.175-2.427 1.047-1.81.714-7.628.714-14.065C58.433 78.073 58.48 68 58.48 58h11.709c0 11 .06 21.418 0 32.152.025 6.58.596 12.446-2.07 17.361z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Cabeçalho com navegação -->
+    <header>
+      <nav>
+        <h1 class="logo">maria vitória</h1>
+        <ul class="nav-links">
+          <li><a href="#sobre">sobre</a></li>
+          <li><a href="#habilidades">habilidades</a></li>
+          <li><a href="#projetos">projetos</a></li>
+          <li><a href="#contato">contato</a></li>
+        </ul>
+        <!-- Botão para menu mobile -->
+        <button class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Seção principal de apresentação -->
+    <section id="hero">
+      <div class="container">
+        <p class="intro-tag">olá, meu nome é</p>
+        <h1 class="hero-title">{Maria Vitória.}</h1>
+        <h2 class="hero-subtitle">
+          <span class="typing-text"></span>
+          <span class="typing-cursor">|</span>
+        </h2>
+        <p class="hero-description">
+          Sou desenvolvedora <strong>frontend</strong> em formação, estudante de
+          ADS. Atualmente estagiária na
+          <strong class="highlight">B3 (Bolsa de Valores do Brasil)</strong>
+          na área de dados. Focada em construir experiências digitais com HTML,
+          CSS e JavaScript, e aplicar meus conhecimentos em projetos reais.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projetos" class="btn-primary">ver projetos</a>
+          <a href="mailto:mavcostta@gmail.com" class="btn-secondary-hero"
+            >entrar em contato</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">01.</span> sobre mim
+        </h2>
+        <div class="sobre-content">
+          <div class="sobre-text">
+            <p>
+              Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>,
+              iniciando a trajetória como estagiária na área de <strong>Dados</strong>.
+              Tenho grande paixão por tecnologia, com foco em
+              <strong>desenvolvimento web e front-end</strong>, explorando HTML, CSS
+              e JavaScript para criar interfaces criativas e funcionais.
+            </p>
+            <p>
+              Estou em fase de aprendizado em <strong>Data & Analytics</strong>,
+              com foco em Python, SQL e visualização de dados, buscando unir minha
+              afinidade com desenvolvimento e o mundo dos dados para construir uma
+              base sólida na carreira de tecnologia.
+            </p>
+            <p class="women-in-tech">
+              Acredito no poder das <strong>mulheres na tecnologia</strong> e 
+              na importância da diversidade para criar soluções inovadoras. 
+              
+            </p>
+            <p class="tech-intro">Tecnologias com as quais tenho trabalhado:</p>
+            <ul class="tech-list">
+              <li>HTML5 & CSS3</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Python & SQL</li>
+              <li>AWS (Athena, Glue, S3)</li>
+              <li>Git & GitHub</li>
+              <li>Excel Avançado</li>
+            </ul>
+          </div>
+          <div class="sobre-image">
+            <div class="women-tech-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <!-- Símbolo feminino Venus -->
+                <circle cx="12" cy="8" r="5" fill="none" stroke="white" stroke-width="2"/>
+                <line x1="12" y1="13" x2="12" y2="22" stroke="white" stroke-width="2"/>
+                <line x1="9" y1="19" x2="15" y2="19" stroke="white" stroke-width="2"/>
+              </svg>
+            </div>
+            <img src="imagens/eu.jpeg" alt="Maria Vitória" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Estatísticas -->
+    <section id="stats" class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            </div>
+            <div class="stat-number" data-target="30">0</div>
+            <div class="stat-label">commits no github</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="stat-number" data-target="7">0</div>
+            <div class="stat-label">repositórios</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number" id="months-coding">0</div>
+            <div class="stat-label">meses codando</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Habilidades -->
+    <section id="habilidades">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">02.</span> habilidades
+        </h2>
+        <div class="habilidades-content">
+          <div class="habilidade-categoria">
+            <h3>frontend</h3>
+            <div class="skills-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Flexbox</span>
+              <span class="skill-tag">Grid</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+            </div>
+          </div>
+          <div class="habilidade-categoria">
+            <h3>estudando</h3>
+            <div class="skills-tags">
+              <span class="skill-tag studying">React</span>
+              <span class="skill-tag studying">TypeScript</span>
+              <span class="skill-tag studying">APIs REST</span>
+              <span class="skill-tag studying">Sass</span>
+            </div>
+          </div>
+          <div class="habilidade-categoria">
+            <h3>ferramentas</h3>
+            <div class="skills-tags">
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Experiência -->
+    <section id="experiencia">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">04.</span> experiência profissional
+        </h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">set/2025 - o momento</div>
+            <div class="timeline-content">
+              <h3>modelagem & analytics</h3>
+              <p class="empresa">B3 - Estágio</p>
+              <p class="descricao">
+                Apoio nas atividades de análise e tratamento de dados. Suporte em
+                modelagem e geração de insights para tomada de decisão, trabalhando
+                com <strong>AWS (Athena, Glue, S3)</strong> e iniciando aprendizado
+                em ferramentas como <strong>Databricks, Tableau e Dremio</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">mar/2020 - set/2025</div>
+            <div class="timeline-content">
+              <h3>atendente de farmácia</h3>
+              <p class="empresa">RD Saúde</p>
+              <p class="descricao">
+                Atendimento ao público em um ambiente dinâmico e sob pressão, com foco
+                em empatia, escuta ativa e resolução de problemas. Desenvolvimento de
+                habilidades em comunicação e suporte ao cliente.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">dez/2017 - abr/2019</div>
+            <div class="timeline-content">
+              <h3>assistente administrativo</h3>
+              <p class="empresa">Vanlix Coleta Industrial - Aprendiz</p>
+              <p class="descricao">
+                Atuei no monitoramento da frota de caminhões, responsável por arquivar
+                documentos, classificando-os segundo critérios apropriados para
+                armazená-los e conservá-los, auxiliando no suporte administrativo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Formação Acadêmica -->
+    <section id="formacao">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">05.</span> formação acadêmica
+        </h2>
+        <div class="formacao-grid">
+          <div class="formacao-card destaque-formacao">
+            <div class="formacao-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <h3>análise e desenvolvimento de sistemas</h3>
+            <p class="instituicao">Descomplica Faculdade Digital</p>
+            <p class="periodo">out/2024 - jun/2027 (cursando)</p>
+            <p class="descricao">
+              Graduação tecnológica focada em desenvolvimento de software,
+              programação web, banco de dados e gestão de projetos de TI.
+            </p>
+          </div>
+
+          <div class="formacao-card">
+            <div class="formacao-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3>arco administrativo</h3>
+            <p class="instituicao">CIEE - Centro de Integração Empresa Escola</p>
+            <p class="periodo">dez/2017 - abr/2019</p>
+            <p class="descricao">
+              Formação técnica em processos administrativos, gestão de
+              documentos e rotinas empresariais.
+            </p>
+          </div>
+
+          <div class="formacao-card">
+            <div class="formacao-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <h3>ensino médio completo</h3>
+            <p class="instituicao">E.E. Dona Chiyo Yamamoto</p>
+            <p class="periodo">concluído em 2016</p>
+            <p class="descricao">Formação básica completa em São Paulo, SP.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Cursos e Certificações -->
+    <section id="cursos">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">06.</span> cursos e certificações
+        </h2>
+        <div class="cursos-grid">
+          <div class="curso-card">
+            <div class="curso-ano">2025</div>
+            <h4>Jornada de Especialização em Desenvolvimento de Software</h4>
+            <p class="curso-instituicao">Grupo Boticário + Koru (160h) - Concluído</p>
+          </div>
+
+          <div class="curso-card">
+            <div class="curso-ano">2025</div>
+            <h4>Curso Excel COMPLETO do Básico ao Avançado</h4>
+            <p class="curso-instituicao">Udemy (28.5h) - Concluído</p>
+          </div>
+
+          <div class="curso-card">
+            <div class="curso-ano">2025</div>
+            <h4>Introdução a Spring Framework com Spring Boot</h4>
+            <p class="curso-instituicao">DIO (3h) - Concluído</p>
+          </div>
+
+          <div class="curso-card">
+            <div class="curso-ano">2025</div>
+            <h4>Ambiente de Desenvolvimento Java</h4>
+            <p class="curso-instituicao">DIO (1h) - Concluído</p>
+          </div>
+
+          <div class="curso-card">
+            <div class="curso-ano">2025</div>
+            <h4>BackEnd Developer</h4>
+            <p class="curso-instituicao">Descomplica Faculdade Digital</p>
+          </div>
+
+          <div class="curso-card">
+            <div class="curso-ano">2025</div>
+            <h4>Basic FrontEnd</h4>
+            <p class="curso-instituicao">Descomplica Faculdade Digital</p>
+          </div>
+
+          <div class="curso-card">
+            <div class="curso-ano">2024</div>
+            <h4>Progammer</h4>
+            <p class="curso-instituicao">Descomplica Faculdade Digital</p>
+          </div>
+
+          <div class="curso-card">
+            <div class="curso-ano">2024</div>
+            <h4>Excel Básico</h4>
+            <p class="curso-instituicao">Descomplica Faculdade Digital</p>
+          </div>
+
+          <div class="curso-card">
+            <div class="curso-ano">2024</div>
+            <h4>Projetos de Sistema de TI</h4>
+            <p class="curso-instituicao">Fundação Bradesco</p>
+          </div>
+
+          <div class="curso-card">
+            <div class="curso-ano">2024</div>
+            <h4>Linguagem de Programação Python</h4>
+            <p class="curso-instituicao">Fundação Bradesco</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Projetos -->
+    <section id="projetos">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">03.</span> projetos
+        </h2>
+        <div class="projetos-grid">
+          <!-- Projeto 1: Marsun -->
+          <div class="projeto-item">
+            <a href="https://marsun.vercel.app/" target="_blank" class="projeto-image">
+              <img src="imagens/marsun (1).png" alt="Preview Marsun" loading="lazy" />
+              <div class="projeto-overlay">
+                <span>ver projeto →</span>
+              </div>
+            </a>
+            <div class="projeto-info">
+              <p class="projeto-tipo">projeto web</p>
+              <h3 class="projeto-titulo">marsun</h3>
+              <div class="projeto-descricao-box">
+                <p>
+                  Site desenvolvido com HTML5 e CSS3, focado em design
+                  responsivo e layout moderno. Projeto que demonstra habilidades
+                  em estruturação semântica e estilização avançada.
+                </p>
+              </div>
+              <ul class="projeto-tech">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Responsive</li>
+              </ul>
+              <div class="projeto-links">
+                <a
+                  href="https://github.com/Mavcostta/marsun"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+                <a href="https://marsun.vercel.app/" target="_blank" aria-label="Ver projeto">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 2: Doces da Joy -->
+          <div class="projeto-item">
+            <a href="https://docesdajoy.vercel.app/" target="_blank" class="projeto-image">
+              <img src="imagens/docesdajoy.png" alt="Preview Doces da Joy" loading="lazy" />
+              <div class="projeto-overlay">
+                <span>ver projeto →</span>
+              </div>
+            </a>
+            <div class="projeto-info">
+              <p class="projeto-tipo">landing page</p>
+              <h3 class="projeto-titulo">doces da joy</h3>
+              <div class="projeto-descricao-box">
+                <p>
+                  Landing page para empresa de doces, desenvolvida com HTML e
+                  CSS. Design atraente e responsivo, focado em apresentar
+                  produtos de forma visual e objetiva.
+                </p>
+              </div>
+              <ul class="projeto-tech">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Responsive</li>
+              </ul>
+              <div class="projeto-links">
+                <a
+                  href="https://github.com/Mavcostta/Doces-da-Joy"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+                <a href="https://docesdajoy.vercel.app/" target="_blank" aria-label="Ver projeto">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 3: Anna Costa -->
+          <div class="projeto-item">
+            <a href="https://www.studioannacosta.com.br/" target="_blank" class="projeto-image">
+              <img src="imagens/annacosta.png" alt="Preview Anna Costa" loading="lazy" />
+              <div class="projeto-overlay">
+                <span>ver projeto →</span>
+              </div>
+            </a>
+            <div class="projeto-info">
+              <p class="projeto-tipo">portfólio pessoal</p>
+              <h3 class="projeto-titulo">anna costa</h3>
+              <div class="projeto-descricao-box">
+                <p>
+                  Portfólio desenvolvido com HTML e CSS, demonstrando
+                  habilidades em design responsivo e estruturação de conteúdo.
+                  Layout limpo e profissional.
+                </p>
+              </div>
+              <ul class="projeto-tech">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Responsive</li>
+              </ul>
+              <div class="projeto-links">
+                <a
+                  href="https://github.com/Mavcostta/annacosta"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+                <a href="https://www.studioannacosta.com.br/" target="_blank" aria-label="Ver projeto">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mais projetos no GitHub -->
+              <ul class="projeto-tech">
+                <li>TypeScript</li>
+                <li>Node.js</li>
+                <li>Backend</li>
+              </ul>
+              <div class="projeto-links">
+                <a
+                  href="https://github.com/Mavcostta/BlogPessoal"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mais projetos no GitHub -->
+          <div class="proximos-projetos">
+            <h3>mais projetos</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem">
+              Confira todos os meus repositórios e contribuições:
+            </p>
+            <a
+              href="https://github.com/Mavcostta?tab=repositories"
+              target="_blank"
+              class="btn-primary"
+              style="display: inline-flex; align-items: center; gap: 0.5rem"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
+              </svg>
+              ver todos no github
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">07.</span> entre em contato
+        </h2>
+        <div class="contato-wrapper">
+          <div class="contato-intro">
+            <h3>vamos conversar?</h3>
+            <p>
+              Estou disponível para projetos freelancer de desenvolvimento web!
+              Se você precisa de um site, quer colaborar em um projeto ou apenas
+              trocar ideias sobre tecnologia, ficarei feliz em conversar e ajudar
+              a transformar sua ideia em realidade.
+            </p>
+          </div>
+
+          <div class="contato-grid">
+            <div class="contato-card">
+              <div class="contato-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <h4>email</h4>
+              <a href="mailto:mavcostta@gmail.com" class="contato-link">mavcostta@gmail.com</a>
+            </div>
+
+            <div class="contato-card">
+              <div class="contato-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <h4>linkedin</h4>
+              <a href="https://linkedin.com/in/mavcostta" target="_blank" class="contato-link">/in/mavcostta</a>
+            </div>
+
+            <div class="contato-card">
+              <div class="contato-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <h4>github</h4>
+              <a href="https://github.com/mavcostta" target="_blank" class="contato-link">@mavcostta</a>
+            </div>
+          </div>
+
+          <div class="contato-cta">
+            <a href="mailto:mavcostta@gmail.com" class="btn-primary">enviar mensagem</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="container">
+        <p>desenvolvido por maria vitória</p>
+        <p class="footer-ano">2025</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
