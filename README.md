@@ -1,4 +1,4 @@
-# Portfólio — Maria Vitória
+# Portfólio
 
 Portfólio profissional de **Maria Vitória Florêncio da Costa**, estudante de
 Análise e Desenvolvimento de Sistemas e Estagiária de Engenharia de Dados.
